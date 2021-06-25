@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red13\green36\blue84;\red245\green245\blue247;}
+{\*\expandedcolortbl;;\cssrgb\c5490\c19608\c40392;\cssrgb\c96863\c96863\c97647;}
+\margl1440\margr1440\vieww25400\viewh16000\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36\fsmilli18200 \cf2 \cb3 \expnd0\expndtw0\kerning0
+TMA1\
+\
+1.Write a program that opens a file and counts the whitespace-separated words in that file.\
+2.Write a program that opens a (text) file, and displays the contents of that file one line at a time. After a line has been displayed, the program should wait for the user to press the <enter> key before displaying the next line in the file.\
+3.Write a program that creates three vector<float> objects. Fill the first two objects with 25 floating-point numbers using a for loop as follows:\
+fill the first vector object with the loop counter value;\
+fill the second vector object with the loop counter value squared;\
+finally, write a for loop that adds the corresponding elements in the first two vectors, and puts the result in the corresponding element of the third vector.\
+Display all three vectors using the format \'93for counter; element + element = element\'94.\
+4.Write a program that uses two nested for loops and the modulus operator (%) to detect and print the prime numbers from 1 to 10,000. Prime numbers are integral numbers that are not evenly divisible by any other numbers except for themselves and one. Display all the primes found.\
+5.Write a program that creates an array of 100 string objects. Fill the array by having your program open a (text) file, and read one line of the file into each string until you have filled the array. Display the array using the format \'93line #: <string>\'94, where # is the actual line number (you can use the array counter for this value), and <string> is the stored string.\
+6.Create a makefile for one of the exercises in this TMA (your choice) that allows the user to type make for a production build of the program, and make debug for a build of the program that includes debugging information.\
+\
+TMA2\
+1.Write a program to manage DVD rental in a \'93video\'94 rental store. Create an abstract data type that represents a DVD in this store. Consider all the data and operations that may be necessary for the DVD type to work well within a rental management system. Include a print() member function that displays all the information about the DVD. Test your data type by creating an array of 10 DVD instances and filling them using information read from a test input file that you create. Display the DVD information.\
+2.Write a program that dynamically creates pieces of storage of the following types using new: int, long, an array of 100 chars, and an array of 100 floats. Print the addresses and values of these using the format: \'93type @ <address>= <value>\'94. After you have printed all the addresses and values, free the storage using delete. Fill the char array using copies of the lowercase and uppercase alphabet (a-z, A-Z), and fill the float array using sequential numbers starting with 101.\
+3.Write a program in which you create a Hen class. Inside this class, nest a Nest class. Inside Nest, place an Egg class. Each class should have a display() member function. For each class, create a constructor and a destructor that prints an appropriate message when it is called. In main(), create an instance of each class using new, and call the display() function for each one. After calling display(), free the storage using delete.\
+4.Write a program in which you create a Text class that contains a string object to hold the text of a file. Give it two constructors: a default constructor, and a constructor that takes a string argument that is the name of the file to open. When the second constructor is used, open the file and read the contents of the file into the string member object. Add a member function contents() to return the string so that you can display it. In main(), open a file using Text, and display the contents.\
+\
+TMA3\
+1.Write a program in which you create a const whose value is determined at runtime by reading the time when the program starts (Hint: use the <ctime> standard header). In a separate function, have the program create two arrays of 10 000 doubles. Initialize the first array with sequential integral values starting with 100, and initialize the second array with the same numbers, but in reverse order (i.e., the first array would contain 100, 101, 102\'85 while the second array contains 10099, 10098, 10097\'85). Loop through both arrays using a single loop, multiply the corresponding array elements from each array together, and display the result. Read the time when the program completes the multiplication, then compute and display the elapsed time. Do not use inline functions in this program.\
+2.Rewrite program #1 using an inline function to perform the calculation. In the test plan for this program (actual results section), compare the time required by this program to execute against the time required by the first (non-inline) program.\
+3.Create a simple class (DoStuff) containing an int, and overload the operator+ as a member function. Also, provide a print() member function that takes an ostream& as an argument and prints to that ostream&. Add a binary operator- and operator+ to the class as member functions. You should be able to use the objects in complex expressions such as a + b \'96 c. Now add the operator++ and operator--, both prefix and postfix versions. Overload the << operator to provide the same functionality as the print() member function. Test the class to show that all requirements work correctly.\
+\
+TMA4\
+1.Write a program that creates a class hierarchy for simple geometry. \
+a.Start with a Point class to hold x and y values of a point. Overload the << operator to print point values, and the + and \'96 operators to add and subtract point coordinates (Hint: keep x and y separate in the calculation).\
+b.Create a pure abstract base class Shape, which will form the basis of your shapes. The Shape class will contain abstract functions to calculate area and circumference of the shape, plus provide the coordinates (Points) of a rectangle that encloses the shape (a bounding box). These will be overloaded by the derived classes. Create a display() function that will display the name of the class, and all stored information about the class (including area, circumference, and bounding box).\
+c.Build the hierarchy by creating the Shape classes Circle, Square, and Triangle. For these derived classes, create default constructors, and constructors whose arguments can initialize the shapes appropriately using the correct number of Point objects (i.e., Circle requires a Point center and a radius, Square requires four Point vertices, while Triangle requires three Point vertices).\
+d.In main(), create one instance each of the following: Circle (10, -5) with a radius of 23; Square (5, -5)(-10,7)(4,23)(-6,12); and Triangle(0,0)(10,10)(-15,15). Display the information from each object.\
+Class point\{\
+	point(int a,b)\{\
+		x=a;\
+		y=b;\
+	\}\
+	point operator+(point obj)\{\
+		p.x=x+obj.x;p.y=y+obj.y;return p;\
+	\}\
+	point operator-(point obj)\{\
+		p.x=x-obj.x;p.y=y-obj.y;return p;\
+	\}\
+	ostream& (\
+\
+2.Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster, etc. In the base class, provide methods that are common to all Rodents, and refine these in the derived classes to perform different behaviours depending on the specific type of Rodent. Rodent must be created as a pure abstract base class. Create an array of pointers (10) to Rodent, and fill it with different specific types of Rodents. Call your base class methods, and display the results.\
+\
+Class Rodent\{\
+	boolean tail,ispet;\
+	int leg,\
+	virtual type()\{\}\
+	virtual tail()\{\}\
+	virtual ispet()\{\}\
+	virtual leg\{\}\
+Class mouse: class Rodent\{\
+	void type()\{\
+		return \'93mouse\'94;\
+Int main()\{\
+	Rodent rodents[11]:=\{\};\
+	for(I=0;i<10;i++)\{\
+		rodents[I]->type();\
+3.Using the Standard C++ Library vector as an underlying implementation, create a Set template class that accepts only one of each type of object that you put into it. Make a nested iterator class that supports the \'93end sentinel\'94 concept in Unit 16. Write test code for your Set in main(), using both your Set template class and the Standard C++ Library set template to verify that the behaviour is correct.}
